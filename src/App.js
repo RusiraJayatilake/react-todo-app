@@ -1,11 +1,18 @@
 import './App.css';
 import AddTodos from './components/addTodo/addTodo';
+import Sample from './components/sample';
 
 function App() {
   return (
-    <header className="App-header">
+    <div>
       <AddTodos />
-    </header>
+      {/* <Sample /> */}
+        {/* <header className="App-header">
+          
+        </header> */}
+      
+    </div>
+    
   );
 }
 
