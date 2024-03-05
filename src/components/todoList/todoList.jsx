@@ -3,7 +3,7 @@ import Todo from "../todo/todo";
 
 const TodoList = ({ todos, onDelete }) => {
     return (
-        <ul className="list-inside text-gray-500 list-disc list-inside dark:text-gray-400">
+        <ul className="text-gray-500 dark:text-gray-400">
             {todos.map(todo => (
                 <li key={todo.id}>
                     <Todo 
