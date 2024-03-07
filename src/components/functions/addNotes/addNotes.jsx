@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import NotesList from '../notesList/notesList';
-import Navbar from '../navbar/navbar';
+import NotesList from '../../lists/notesList/notesList'
+import Navbar from '../../common/navbar';
 
 class AddNotes extends Component {
     state = { 
@@ -15,7 +15,7 @@ class AddNotes extends Component {
         this.setState({notes}, () => {
             document.getElementById('note-title').value = '';
             document.getElementById('note-text').value = '';
-        })
+        });
     }
 
     render() { 
@@ -39,7 +39,7 @@ class AddNotes extends Component {
                 <div>
                     {/* Notes List */}
                     <NotesList
-                        notes={this.state.notes}
+                        notes={notes}
                     />
                 </div>
 

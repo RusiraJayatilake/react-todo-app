@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import TodoList from '../todoList/todoList';
-import Navbar from '../navbar/navbar';
+import TodoList from '../../lists/todoList/todoList';
+import Navbar from '../../common/navbar';
 
 class AddTodos extends Component {
     state = { 

@@ -1,6 +1,6 @@
 import './App.css';
-import AddTodos from './components/addTodo/addTodo';
-import AddNotes from './components/addNotes/addNotes';
+import AddNotes from './components/functions/addNotes/addNotes';
+import AddTodos from './components/functions/addTodo/addTodo';
 
 function App() {
   return (

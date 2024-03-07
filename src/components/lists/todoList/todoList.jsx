@@ -1,7 +1,9 @@
 import React from "react";
-import Todo from "../todo/todo";
+import Todo from '../../common/todo/todo';
 
-const TodoList = ({ todos, onDelete }) => {
+const TodoList = (props) => {
+    const {todos, onDelete} = props
+
     return (
         <ul className="text-gray-500 dark:text-gray-400">
             {todos.map(todo => (

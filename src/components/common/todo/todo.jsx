@@ -1,7 +1,9 @@
 import React from "react";
-import Like from "../common/like.jsx";
+import Like from '../like';
 
-const Todo = ({ id, text, onDelete }) => {
+const Todo = (props) => {
+    const {id, text, onDelete} = props
+
     const handleDeleteClick = () => {
         onDelete(id);
     }
