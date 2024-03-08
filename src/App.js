@@ -1,12 +1,11 @@
 import './App.css';
-import AddNotes from './components/functions/addNotes/addNotes';
-import AddTodos from './components/functions/addTodo/addTodo';
+import Notes from '../src/components/functions/addNotes/addNotes';
 
 function App() {
   return (
     <div>
       {/* <AddTodos /> */}
-      <AddNotes />
+      <Notes />
     </div>
   );
 }

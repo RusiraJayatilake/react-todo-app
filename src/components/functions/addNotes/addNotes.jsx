@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import NotesList from '../../lists/notesList/notesList'
 import Navbar from '../../common/navbar';
 
-class AddNotes extends Component {
+class Notes extends Component {
     state = { 
         notes: []
     } 
@@ -16,6 +16,15 @@ class AddNotes extends Component {
             document.getElementById('note-title').value = '';
             document.getElementById('note-text').value = '';
         });
+    }
+
+    handleUpdate = (noteId) => {  }
+
+    handleDelete = (noteId)  => {
+        const deletedNotes = this.state.notes.filter(note =>{
+            return note.id !== noteId
+        });
+        this.setState({ notes: deletedNotes });
     }
 
     render() { 
@@ -40,13 +49,13 @@ class AddNotes extends Component {
                     {/* Notes List */}
                     <NotesList
                         notes={notes}
+                        onDelete={this.handleDelete}
                     />
                 </div>
 
             </React.Fragment>
-            
         );
     }
 }
  
-export default AddNotes;
+export default Notes;

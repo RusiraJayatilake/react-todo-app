@@ -2,7 +2,8 @@ import React from "react";
 import Note from '../../common/note/note'
 
 const NotesList = ( props ) => {
-    
+    const { notes, onDelete } = props;
+
     if (props.notes.length === 0){
         return (
             <div className="flex items-center justify-center">
@@ -15,12 +16,13 @@ const NotesList = ( props ) => {
         <div className="flex items-center justify-center">
             <div className="container mx-auto p-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-                    {props.notes.map(note => (
+                    {notes.map(note => (
                         <div className="bg-white rounded-lg border p-4" key={note.id}>
-                           <Note 
+                            <Note 
                                 title={note.title}
                                 text={note.text}
-                           />
+                                onDelete={()=> onDelete(note.id)}
+                            />
                         </div>
                     ))}
                 </div>
