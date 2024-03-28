@@ -1,5 +1,5 @@
 import React from "react";
-import Like from '../like';
+import Like from './common/like';
 
 const Todo = (props) => {
     const {id, text, onDelete} = props

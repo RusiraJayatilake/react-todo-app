@@ -1,5 +1,5 @@
 import React from "react";
-import Todo from '../../common/todo/todo';
+import Todo from './todo';
 
 const TodoList = (props) => {
     const {todos, onDelete} = props;
