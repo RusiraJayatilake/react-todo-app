@@ -1,12 +1,13 @@
 import './App.css';
-import Notes from '../src/components/functions/addNotes/addNotes';
+import AddTodos from './components/addTodo';
+import store from './components/Redux/store';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
-    <div>
-      {/* <AddTodos /> */}
-      <Notes />
-    </div>
+    <Provider store={store}>
+      <AddTodos />
+    </Provider>
   );
 }
 
