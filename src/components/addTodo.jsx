@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import TodoList from './todoList';
 import Navbar from './common/navbar';
-import { addTodo, deleteTodo } from './Redux/todoSlice';
+import { addTodo } from './Redux/todoSlice';
 
 const AddTodos = () => {
     const [text, setText] = useState("");
@@ -16,10 +16,6 @@ const AddTodos = () => {
             dispatch(addTodo(text));
             setText('');
         }
-    };
-
-    const handleDelete = (id) => {
-        dispatch(deleteTodo(id));
     };
 
     const handleChange = (event) => {
@@ -39,6 +35,7 @@ const AddTodos = () => {
                                 id='add-todos' 
                                 placeholder="Add Todo" 
                                 required
+                                value={text}
                                 onChange={handleChange}
                             />
                             <button className="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:bg-teal">Add</button>
@@ -48,7 +45,6 @@ const AddTodos = () => {
             </div>
             <TodoList 
                 todos={todos}
-                onDelete={() => handleDelete(todos.id)}
             />
                 
         </React.Fragment>             

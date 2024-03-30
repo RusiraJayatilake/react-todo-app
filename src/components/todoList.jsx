@@ -1,16 +1,14 @@
 import React from "react";
 import Todo from './todo';
 
-const TodoList = (props) => {
-    const {todos, onDelete} = props;
-
+const TodoList = ({todos}) => {
     return (
         <ul className="text-gray-500 dark:text-gray-400">
             {todos.map(todo => (
                 <li key={todo.id}>
-                    <Todo 
+                    <Todo
+                        id = {todo.id} 
                         text = {todo.text}
-                        onDelete={() => onDelete(todo.id)}
                     />
                 </li>
             ))}
